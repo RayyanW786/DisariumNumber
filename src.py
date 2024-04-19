@@ -10,8 +10,8 @@ def resolve_disarium(user: str, numbers: List[int]) -> Tuple[int, List[str], boo
     mapper: List[str] = []
     for idx, number in enumerate(numbers, start=1):
         resolved_value += resolve_power(idx, number)
-        mapping.append(f"{number}**{idx}")
-    return resolved_value, mapping, str(resolved_value) == user_input
+        mapper.append(f"{number}**{idx}")
+    return resolved_value, mapper, str(resolved_value) == user_input
 
 
 while True:
